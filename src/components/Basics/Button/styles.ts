@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { IButton } from '../../utils/interfaces';
-import { colors } from '../../styles/theme';
+import { IButton } from '../../../utils/interfaces';
+import { colors } from '../../../styles/theme';
 
 
 const {
