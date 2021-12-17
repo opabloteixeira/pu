@@ -24,8 +24,14 @@ export default {
         flex-direction: column;
         h1 { 
             color: ${white};
-        }
+        } 
         `,
+    RightHeader: styled.div`
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 250px;
+    `,
     BreadCrumb: styled.small`
         color: ${white};
     `,

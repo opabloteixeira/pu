@@ -26,7 +26,7 @@ import Woman from '../../assets/img/woman.jpg'
 
 export const Sidebar = () => {
 
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(true);
 
     console.log(menuOpen)
     return ( 

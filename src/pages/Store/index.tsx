@@ -1,6 +1,5 @@
-import { Button } from "../../components/Basics/Button";
-import { Container } from "../../styles/theme";
 
+import { Container } from "../../styles/theme";
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
 

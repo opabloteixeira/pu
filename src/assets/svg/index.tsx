@@ -18,3 +18,4 @@ export { default as IconStoreAvaliations } from './IconStoreAvaliations';
 export { default as IconPromotion } from './IconPromotion';
 export { default as IconExit } from './IconExit';
 export { default as IconPlus } from './IconPlus';
+export { default as IconFullScreen } from './IconFullScreen';
