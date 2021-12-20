@@ -26,7 +26,7 @@ import Woman from '../../assets/img/woman.jpg'
 
 export const Sidebar = () => {
 
-    const [menuOpen, setMenuOpen] = useState(true);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     console.log(menuOpen)
     return ( 
@@ -58,10 +58,7 @@ export const Sidebar = () => {
                 <S.ItemMenu menuOpen={menuOpen}> <IconCoupon /> <span>Cuponagem</span> </S.ItemMenu>
                 <S.ItemMenu menuOpen={menuOpen}> <IconOrdersAvaliations /> <span>Avaliações de Pedidos</span> </S.ItemMenu>
                 <S.ItemMenu menuOpen={menuOpen}> <IconStoreAvaliations /> <span>Avaliações de Lojas</span> </S.ItemMenu>
-
-
                 <S.FooterSideBar menuOpen={menuOpen}>
-              
                         <S.TopFooter menuOpen={menuOpen}>
                             <span>
                                 <div>

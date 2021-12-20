@@ -8,8 +8,8 @@ const { white,  light_purple, dark_purple, gray3} = colors;
 export default {
     Sidebar: styled.aside<ISideBar>`
         z-index: 1; 
-        width: ${({ menuOpen }) => menuOpen ? '117px' : '352px'};
-        transition: width 0.5s ease;
+        width: ${({ menuOpen }) => !menuOpen ? '117px' : '352px'};
+        transition: width 0.6s ease;
         height: auto;
         background-color: ${white};
         position: fixed;
@@ -19,14 +19,17 @@ export default {
     HeaderSideBar: styled.div<ISideBar>`
         display: flex;
         justify-content: space-around;
-        flex-direction: ${({ menuOpen }) => menuOpen ? 'column-reverse' : 'row'};
+        flex-direction: ${({ menuOpen }) => !menuOpen ? 'column-reverse' : 'row'};
         margin: 30px -30px;
         align-items: center;
-        height: 100px;
+        height: ${({ menuOpen }) => !menuOpen && '100px' };
+        div { 
+            cursor: pointer;
+        }
     `,
 
     WrapLogo: styled.div<ISideBar>`
-        margin-left: ${({ menuOpen }) => menuOpen ? '0' : '-18px'};
+        margin-left: ${({ menuOpen }) => !menuOpen ? '0' : '-18px'};
     `, 
     
     ItemMenu: styled.a<ISideBar>`
@@ -35,32 +38,33 @@ export default {
         display: flex;
         align-items: center;
         justify-content: left;
-        justify-content: ${({ menuOpen }) => menuOpen ? 'center' : 'left'};
+        justify-content: ${({ menuOpen }) => !menuOpen ? 'center' : 'left'};
         border-radius: 24px;
         margin 0 auto;
         padding: 0 15px;
-        width: ${({ menuOpen }) => menuOpen ? '50px' : '100%'};
+        width: ${({ menuOpen }) => !menuOpen ? '50px' : '100%'};
         max-width: 312px;
         height: 48px;
         background-color: ${({active}) => active && `${light_purple}`};
         &:hover {
-            transition: background-color .2s ease-in-out;
+            transition: background-color .3s ease-in-out;
             background-color: ${light_purple};
             span { 
                 color: ${dark_purple};
             }
         } 
         span { 
-            display: ${({ menuOpen }) => menuOpen && 'none'};
+            display: ${({ menuOpen }) => !menuOpen && 'none'};
             margin-left: 19px;
         }
+
     `,
     FooterSideBar: styled.div<ISideBar>`
         border-top: 1px solid ${gray3};
         bottom: 0;
         max-height: 160px;
         height: auto;
-        padding-bottom: ${({ menuOpen }) => menuOpen && '30px'};
+        padding-bottom: ${({ menuOpen }) => !menuOpen && '30px'};
         width: 100%;
         padding-top: 30px;
         margin-top: 30px;
@@ -82,7 +86,7 @@ export default {
                     width: 48px;
                 }
                 div.texts {
-                    display: ${({ menuOpen }) => menuOpen ? 'none' : 'flex' };
+                    display: ${({ menuOpen }) => !menuOpen ? 'none' : 'flex' };
                     flex-direction: column;
                     justify-content: left;
                     align-items: left;
@@ -98,18 +102,18 @@ export default {
             }
 
             i {
-                display: ${({ menuOpen }) => menuOpen && 'none' };
+                display: ${({ menuOpen }) => !menuOpen && 'none' };
             }
     `,
     BottomFooter: styled.div<ISideBar>`
         width: 100%;   
         display: flex;
-        visibility: ${({ menuOpen }) => menuOpen ? 'hidden' : 'visible' };
-        opacity: ${({ menuOpen }) => menuOpen ? '0' : '1' };
+        visibility: ${({ menuOpen }) => !menuOpen ? 'hidden' : 'visible' };
+        opacity: ${({ menuOpen }) => !menuOpen ? '0' : '1' };
         transition: visibility 0s, opacity 0.5s linear;
         align-items: center;
         justify-content: left;
-        height: ${({ menuOpen }) => menuOpen ? '0' : '80px' };
+        height: ${({ menuOpen }) => !menuOpen ? '0' : '80px' };
         padding-left: 20px;
         img{ 
             width: 40px;

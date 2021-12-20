@@ -1,13 +1,13 @@
 import S from "./styles"
 import { Button } from '../Basics/Button';
-import { IconFullScreen } from '../../assets/svg'
+import { IconFullScreen ,IconArowRight } from '../../assets/svg'
 
 export const Header = () => {
     return (
         <S.Container>
             <S.LeftHeader>
                 <S.BreadCrumb>
-                    Breadcrumb > Breadcrumb > Breadcrumb
+                    Breadcrumb  <IconArowRight /> Breadcrumb  <IconArowRight />  Breadcrumb
                 </S.BreadCrumb>
                 <h1>
                     Cadastro de Lojas

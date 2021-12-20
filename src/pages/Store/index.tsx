@@ -3,7 +3,7 @@ import { Container } from "../../styles/theme";
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
 
-const Store = () => (
+const Store = () => ( 
     <Container>     
         <Header />
         <Sidebar />
@@ -12,7 +12,8 @@ const Store = () => (
 
 export default Store;  
 
-{/* <Button icon>Importar lojas</Button>
+{/* Exemplos de chamadas botão genérico
+<Button icon>Importar lojas</Button>
 <Button disable icon>Importar lojas</Button>
 
 <Button >Salvar</Button>
