@@ -33,6 +33,8 @@ export default {
     `, 
     
     ItemMenu: styled.a<ISideBar>`
+        transition: width 0.6s ease;
+
         cursor: pointer;
         position: relative;
         display: flex;
