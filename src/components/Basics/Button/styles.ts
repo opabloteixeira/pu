@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { IButton } from '../../utils/interfaces';
-import { colors } from '../../styles/theme';
+import { IButton } from '../../../utils/interfaces';
+import { colors } from '../../../styles/theme';
 
 
 const {
@@ -16,7 +16,7 @@ const {
 
 export default {
     Button: styled.button<IButton>`
-        width: ${({ icon }) => icon ? '163px' : '139px'};
+        width: ${({ icon }) => icon ? '210px' : '139px'};
         color: ${({ icon }) => icon  ? primary_color : white};
         background-color: ${({ icon }) => icon  ? white : primary_color};
         

@@ -1,4 +1,4 @@
-
+import styled from 'styled-components';
 
 export const colors = {
     primary_color: '#4D2285',
@@ -21,3 +21,5 @@ export const colors = {
     drop_shadow_color: 'rgba(16, 16, 16, 0.08);',
     
 };
+
+export const Container = styled.div``

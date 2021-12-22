@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import { colors } from './theme';
 
-const { black } = colors;
+const { black, gray1 } = colors;
 
 
 const genericFontStyle = {
@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
   }
   body  {
-    background: cyan;
+    background: ${gray1};
   }
 
   h1 {
