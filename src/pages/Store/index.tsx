@@ -2,11 +2,26 @@
 import { Container } from "../../styles/theme";
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
+import { StepItem } from '../../components/StepItem';
+
+
+import S from './styles';
 
 const Store = () => ( 
-    <Container>     
+    <Container>
         <Header />
-        <Sidebar />
+        <Sidebar /> 
+        <S.Content>
+            <div>
+                <StepItem active={false} accessed={true} disable={false} />
+                <StepItem active={true} accessed={false} disabled={false} /> 
+                <StepItem active={false} accessed={false} disabled={true} />
+                <StepItem active={false} accessed={false} disabled={true} />
+                <StepItem active={false} accessed={false} disabled={true} />
+            </div> 
+            <S.Section/>
+           
+        </S.Content>
     </Container>
 )
 

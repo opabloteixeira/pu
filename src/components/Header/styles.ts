@@ -4,14 +4,13 @@ import { colors } from '../../styles/theme';
 
 const { primary_color, white } = colors;
 
-
 export default {
     Container: styled.div`
         height: 105px;
         width: 100%;
         background-color: ${primary_color}; 
         position: fixed;
-        z-index: -1;
+        z-index: 0;
         display: flex; 
         justify-content: space-between;
         align-items: center;
