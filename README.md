@@ -1,3 +1,3 @@
 # Módulo de Lojas
 
-Readme construção...
+Readme construção..
