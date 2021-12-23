@@ -1,26 +1,40 @@
 import styled from 'styled-components';
 
 import { colors } from '../../styles/theme';
+import { IItemList } from '../../utils/interfaces/ItemList';
 
-const { water_green, gray3, primary_color } = colors;
+const { gray3, primary_color } = colors;
 
 export default {
-    Content: styled.div<any>`
-        height: 55vh;
+    Content: styled.div`
+        height: 549px;
         width: 90%;
-        padding: 124px 0 0 157px;
-        /* background-color: #eee; */
+        padding: 157px 0 0 298px;
         display: flex; 
-        div {
-            border-left: 1px solid ${gray3};
-        }
-
         `,
-        Section: styled.div`
-            height: 80vh;
-            width: 80%;
-            margin-left: 30px;
-            background-color: ${primary_color};
-        ` 
+    WrapperSteps: styled.div`
+        border-left: 1px solid ${gray3};
+        position: relative;
+        `,
+    WrapperList: styled.ul`
+        position:absolute;
+        top: 0;
+        right: 57px;
+    `,
+    ItemList: styled.li<IItemList>`
+        height: 88px;
+        width: 125px;
+        text-align: right;
+        font-size: 14px;
+        list-style-type: none;
+        line-height: ${({ singleName }) => singleName && "37px"};
+        font-weight: ${({state}) => state === "active" ? '600' : '400'};
+    `, 
+    Section: styled.div`
+        height: 80vh;
+        width: 80%;
+        margin-left: 30px;
+        background-color: ${primary_color};
+    ` 
         
 } 

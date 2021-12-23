@@ -12,8 +12,6 @@ const {
     gray4
 } = colors;
 
-
-
 export default {
     Button: styled.button<IButton>`
         width: ${({ icon }) => icon ? '210px' : '139px'};
@@ -41,18 +39,18 @@ export default {
         border: ${({ border }) => border && `2px solid ${primary_color}`};
         border: ${({ disable }) => disable && `2px solid ${gray3}`};
 
-        strong {
-            color: ${({ icon }) => icon ? primary_color : white};
-            color: ${({ border }) => border && primary_color};
-            color: ${({ disable }) => disable && gray4};
-        }
         
-        &:hover {
+        &:hover  {
             background-color:
             ${({ icon, disable }) => icon && !disable ? light_purple : !disable && dark_purple};
             strong {
                 color: ${({ border, disable }) => border && !disable && white};
             }
         }
-    `
+        `,
+    TextButton: styled.strong<IButton>`
+        color: ${({ icon }) => icon ? primary_color : white};
+        color: ${({ border }) => border && primary_color};
+        color: ${({ disable }) => disable && gray4};
+    `,
 }

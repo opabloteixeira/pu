@@ -21,10 +21,13 @@ export default {
         justify-content: left;
         align-items: center;
         flex-direction: column;
-        h1 { 
-            color: ${white};
-        } 
+
         `,
+    TitleHeader: styled.h1`
+        color: ${white};
+        margin-left: 15px;
+        margin-top: 5px;
+    `,
     RightHeader: styled.div`
         display: flex;
         justify-content: space-between;
@@ -33,6 +36,9 @@ export default {
     `,
     BreadCrumb: styled.small`
         color: ${white};
+    `,
+    WrapperFullscreen: styled.div`
+        cursor: pointer;
     `,
 }
     

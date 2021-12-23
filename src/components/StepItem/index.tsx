@@ -1,32 +1,19 @@
-
 import S from './styles';
 
 import { IconCheck } from '../../assets/svg';
-export const StepItem = ( props: any ) => {
-
-
-    const { active = false, accessed = false, disabled = false, } = props;
-
-    console.log(props);
-    return (
+import { IStepItem } from '../../utils/interfaces';
+export const StepItem = ( { stepType }: IStepItem ) => (
         <S.Container
-            active={active}
-            accessed={accessed}
-            disabled={disabled}
-        > 
-            {active && (
-                <S.FieldSelectedItem
-                    active={active}
-                    accessed={accessed}
-                    disabled={disabled}
-                />
+            stepType={stepType}
+            > 
+            {stepType === "active" && (
+                <S.FieldSelectedItem />
             )} 
-                
-                <S.FieldBallItem accessed={accessed}> 
-            {accessed && (
-                    <IconCheck />
+
+                <S.FieldBallItem stepType={stepType} > 
+                    {stepType === "accessed"  && (
+                        <IconCheck />
                     )}
                 </S.FieldBallItem>  
         </S.Container>
     )
-}

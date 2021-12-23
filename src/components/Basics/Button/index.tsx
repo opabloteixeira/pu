@@ -1,14 +1,15 @@
 
 import S from './styles';
 import { IconButton } from '../../../assets/svg'
+import { IButton } from '../../../utils/interfaces';
 
-export const Button = ({ icon, border, disable, children }: any) => (
+export const Button = ({ icon, border, disable, children }: IButton) => (
     <S.Button icon={icon} border={border} disable={disable}>
 
         { icon && <IconButton />}
-        <strong>
+        <S.TextButton icon={icon} border={border} disable={disable}>
             {children}
-        </strong>
+        </S.TextButton>
     </S.Button> 
 )
 

@@ -9,7 +9,7 @@ export default {
     Sidebar: styled.aside<ISideBar>`
         z-index: 1; 
         width: ${({ menuOpen }) => !menuOpen ? '117px' : '352px'};
-        transition: width 0.6s ease;
+        transition: width 0.4s ease;
         height: auto;
         background-color: ${white};
         position: fixed;
@@ -23,9 +23,9 @@ export default {
         margin: 30px -30px;
         align-items: center;
         height: ${({ menuOpen }) => !menuOpen && '100px' };
-        div { 
-            cursor: pointer;
-        }
+        `,
+    WrapperIconHamburger: styled.div`
+        cursor: pointer;
     `,
 
     WrapLogo: styled.div<ISideBar>`
@@ -55,12 +55,14 @@ export default {
                 color: ${dark_purple};
             }
         } 
-        span { 
-            display: ${({ menuOpen }) => !menuOpen && 'none'};
-            margin-left: 19px;
-        }
 
+        
+        `,
+    TitleItemMenu: styled.span<ISideBar>`
+        display: ${({ menuOpen }) => !menuOpen && 'none'};
+        margin-left: 19px;
     `,
+    
     FooterSideBar: styled.div<ISideBar>`
         border-top: 1px solid ${gray3};
         bottom: 0;
@@ -68,44 +70,47 @@ export default {
         height: auto;
         padding-bottom: ${({ menuOpen }) => !menuOpen && '30px'};
         width: 100%;
-        padding-top: 30px;
-        margin-top: 30px;
+        padding-top: 20px;
+        margin-top: 20px;
     `,
     TopFooter: styled.div<ISideBar>`
             display: flex;
             align-items: center;
-            justify-content: space-around;
-
-            span{ 
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                height: 40px;
-                width: 70%;
-                img{
-                    border-radius: 50px;
-                    height:48px;
-                    width: 48px;
-                }
-                div.texts {
-                    display: ${({ menuOpen }) => !menuOpen ? 'none' : 'flex' };
-                    flex-direction: column;
-                    justify-content: left;
-                    align-items: left;
-                    width: 100%;
-                    margin-left: 8px;
-
-                    h5{
-                        font-weight: 400;
-                        font-size: 12px;
-                    }
-
-                }
-            }
-
+            justify-content: center;
             i {
                 display: ${({ menuOpen }) => !menuOpen && 'none' };
             }
+    `,
+    WrapperUserFooter: styled.span<ISideBar>`
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 40px;
+            width: 70%; 
+    `,
+    WrapperImg: styled.div``,
+
+    UserImg: styled.img<ISideBar>`
+        border-radius: 50px;
+        height:48px; 
+        width: 48px;
+        margin-left: ${({ menuOpen}) => menuOpen && '-20px' }
+    `,
+    WrapperIconExit: styled.i`
+        cursor: pointer;
+    `,
+    FooterTexts: styled.span<ISideBar>`
+        display: ${({ menuOpen }) => !menuOpen ? 'none' : 'flex' };
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        width: 100%;
+        margin-left: 8px;
+    `,
+    UserName: styled.strong``,
+    UserOccupation: styled.h5`
+        font-weight: 400;
+        font-size: 12px;
     `,
     BottomFooter: styled.div<ISideBar>`
         width: 100%;   
@@ -117,23 +122,24 @@ export default {
         justify-content: left;
         height: ${({ menuOpen }) => !menuOpen ? '0' : '80px' };
         padding-left: 20px;
-        img{ 
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid ${white};
-            margin-right: -13px;
-        }
+    `,
+    ProfileImg: styled.img<ISideBar>`
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid ${white};
+        margin-right: -13px;
+        
+    `,
+    PlusProfileImg: styled.span`
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid ${white};
+        background-color: ${dark_purple};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    `,
 
-        span {  
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid ${white};
-            background-color: ${dark_purple};
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    `
 } 
