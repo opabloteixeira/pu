@@ -27,6 +27,8 @@ export default {
         color: ${white};
         margin-left: 15px;
         margin-top: 5px;
+        display: flex;
+        flex-direction: column;
     `,
     RightHeader: styled.div`
         display: flex;
