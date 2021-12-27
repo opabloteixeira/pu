@@ -19,11 +19,11 @@ export const Header = () => {
     return (
         <S.Container>
             <S.LeftHeader>
-                <S.BreadCrumb>
-                    Breadcrumb  <IconArowRight /> Breadcrumb  <IconArowRight />  Breadcrumb
-                </S.BreadCrumb>
                 <S.TitleHeader>
-                    Cadastro de Lojas
+                <S.BreadCrumb>
+                    Clientes  <IconArowRight /> Cliente A  <IconArowRight />  Adicionar lojas
+                </S.BreadCrumb>
+                    Adicionar lojas
                 </S.TitleHeader>
             </S.LeftHeader>
             <S.RightHeader>

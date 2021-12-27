@@ -14,6 +14,9 @@ export default {
         background-color: ${white};
         position: fixed;
         left: 0;
+        overflow-y: overlay;
+        height: calc(100% + 6px);
+        overflow-x: hidden;
     `,
 
     HeaderSideBar: styled.div<ISideBar>`
@@ -33,7 +36,7 @@ export default {
     `, 
     
     ItemMenu: styled.a<ISideBar>`
-        transition: width 0.6s ease;
+        transition: width 0.4s ease;
 
         cursor: pointer;
         position: relative;
@@ -49,14 +52,12 @@ export default {
         height: 48px;
         background-color: ${({active}) => active && `${light_purple}`};
         &:hover {
-            transition: background-color .3s ease-in-out;
+            transition: background-color .4s ease-in-out;
             background-color: ${light_purple};
             span { 
                 color: ${dark_purple};
             }
         } 
-
-        
         `,
     TitleItemMenu: styled.span<ISideBar>`
         display: ${({ menuOpen }) => !menuOpen && 'none'};
@@ -117,7 +118,7 @@ export default {
         display: flex;
         visibility: ${({ menuOpen }) => !menuOpen ? 'hidden' : 'visible' };
         opacity: ${({ menuOpen }) => !menuOpen ? '0' : '1' };
-        transition: visibility 0s, opacity 0.5s linear;
+        transition: visibility 0s, opacity 0.4s linear;
         align-items: center;
         justify-content: left;
         height: ${({ menuOpen }) => !menuOpen ? '0' : '80px' };
